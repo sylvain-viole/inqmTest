@@ -9,7 +9,6 @@
     "author": "mandriao84",
     "license": "ISC",
     "devDependencies": {
-        "cypress": "^8.7.0"
-    },
-    "dependencies": {}
+        "cypress": "^9.5.0"
+    }
 }
