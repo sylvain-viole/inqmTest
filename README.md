@@ -3,7 +3,12 @@
 ## Description
 
 **Automate a user avatar update scenario**
+- Visit `www.welcometothejungle.com/fr/me/settings/account`
+- Log in
+- Update avatar
+---
 
+## Insights :
 - This project uses a basic POM to handle locators.
 - `cy.session` is used to handle login and cookies.
 - API is asserted as well as UI.
