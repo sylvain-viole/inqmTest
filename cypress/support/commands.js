@@ -52,7 +52,7 @@
 
 import "cypress-file-upload";
 
-import { SignInPage } from "./Pages/signInPage";
+import { SignInPage } from "./pages/SignInPage";
 
 Cypress.Commands.add(
   "attachFiles",

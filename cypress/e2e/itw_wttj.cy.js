@@ -1,7 +1,7 @@
 import { ApiHelper } from "../support/helpers/ApiHelper";
 import { killCookie } from "../support/helpers/killCookie";
-import { MeSettingsAccountPage } from "../support/Pages/MeSettingsAccountPage";
-import { SignInPage } from "../support/Pages/signInPage";
+import { MeSettingsAccountPage } from "../support/pages/MeSettingsAccountPage";
+import { SignInPage } from "../support/pages/SignInPage";
 
 const settingsPage = new MeSettingsAccountPage();
 const signinPage = new SignInPage();
