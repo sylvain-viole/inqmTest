@@ -1,5 +1,5 @@
 {
-  "name": "mandriao84",
+  "name": "inqm",
   "version": "1.0.0",
   "description": "google search testing",
   "main": "",
@@ -12,7 +12,7 @@
     "cy:electron:desktop:run": "cypress run --e2e --browser electron --config viewportWidth=1536,viewportHeight=960",
     "git": "git reset --hard origin/master && git fetch origin && git pull origin"
   },
-  "author": "mandriao84",
+  "author": "inqm",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^10.9.0",
