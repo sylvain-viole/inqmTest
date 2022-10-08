@@ -1,5 +1,5 @@
 # Inqom Technical Test
-[![<sylvain-viole>](https://circleci.com/gh/<sylvain-viole>/<inqmTest>.svg?style=svg)](https://app.circleci.com/pipelines/github/sylvain-viole/inqmTest)
+[![sylvain-viole](https://circleci.com/gh/sylvain-viole/inqmTest.svg?style=svg)](https://app.circleci.com/pipelines/github/sylvain-viole/inqmTest)
 
 ## Description
 
@@ -18,19 +18,24 @@
 git clone https://github.com/sylvain-viole/inqmTest.git
 ```
 
-2. Install the dependencies
+2. Request env var file `cypress.env.json` from the author or use your own, you'll need :
+- `USER_EMAIL`
+- `USER_PASSWORD`
+- `API_URL`
+
+3. Install the dependencies
 
 ```bash
 npm i
 ```
 
-3. Open Cypress
+4. Open Cypress
 
 ```bash
 npx cypress open
 ```
 
-4. Run tests
+5. Run tests
 `npm run cy:<browser>:<viewport>:<action>`
 
 - Example :
