@@ -4,6 +4,8 @@
     "description": "google search testing",
     "main": "",
     "scripts": {
+        "cy:chrome:open": "cypress open --e2e --browser chrome",
+        "cy:chrome:run": "cypress run --e2e --browser chrome",
         "git": "git reset --hard origin/master && git fetch origin && git pull origin"
     },
     "author": "mandriao84",
