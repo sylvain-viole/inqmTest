@@ -1,4 +1,4 @@
-# Inqom Technical Test [![sylvain-viole](https://circleci.com/gh/sylvain-viole/inqmTest.svg?style=svg)](https://app.circleci.com/pipelines/github/sylvain-viole/inqmTest)
+# ![image](https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/gmnukmlpf3yqguzggdvk) Inqom Technical Test [![sylvain-viole](https://circleci.com/gh/sylvain-viole/inqmTest.svg?style=svg)](https://app.circleci.com/pipelines/github/sylvain-viole/inqmTest)
 
 ## Description
 
