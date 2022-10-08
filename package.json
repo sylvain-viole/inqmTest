@@ -1,18 +1,21 @@
 {
-    "name": "mandriao84",
-    "version": "1.0.0",
-    "description": "google search testing",
-    "main": "",
-    "scripts": {
-        "cy:chrome:mobile:open": "cypress open --e2e --browser chrome --config viewportWidth=350,viewportHeight=600",
-        "cy:chrome:desktop:open": "cypress open --e2e --browser chrome --config viewportWidth=1536,viewportHeight=960",
-        "cy:chrome:desktop:run": "cypress run --e2e --browser chrome --config viewportWidth=1536,viewportHeight=960",
-        "git": "git reset --hard origin/master && git fetch origin && git pull origin"
-    },
-    "author": "mandriao84",
-    "license": "ISC",
-    "devDependencies": {
-        "cypress": "^10.9.0",
-        "cypress-file-upload": "^5.0.8"
-    }
+  "name": "mandriao84",
+  "version": "1.0.0",
+  "description": "google search testing",
+  "main": "",
+  "scripts": {
+    "cy:chrome:mobile:open": "cypress open --e2e --browser chrome --config viewportWidth=350,viewportHeight=600",
+    "cy:chrome:mobile:run": "cypress run --e2e --browser chrome --config viewportWidth=350,viewportHeight=600",
+    "cy:chrome:desktop:open": "cypress open --e2e --browser chrome --config viewportWidth=1536,viewportHeight=960",
+    "cy:chrome:desktop:run": "cypress run --e2e --browser chrome --config viewportWidth=1536,viewportHeight=960",
+    "cy:electron:mobile:run": "cypress run --e2e --browser electron --config viewportWidth=350,viewportHeight=600",
+    "cy:electron:desktop:run": "cypress run --e2e --browser electron --config viewportWidth=1536,viewportHeight=960",
+    "git": "git reset --hard origin/master && git fetch origin && git pull origin"
+  },
+  "author": "mandriao84",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.9.0",
+    "cypress-file-upload": "^5.0.8"
+  }
 }
