@@ -2,3 +2,4 @@
 node_modules
 cypress/integration/me_itw_wttj.js
 .vscode
+cypress.env.json
