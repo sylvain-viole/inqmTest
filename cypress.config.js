@@ -53,9 +53,6 @@ module.exports = defineConfig({
       return require("./cypress/plugins/index.js")(on, config);
     },
     baseUrl: "https://www.welcometothejungle.com/fr",
-    env: {
-      apiUrl: "https://api.welcometothejungle.com/api/v1",
-    },
     watchForFileChanges: false,
   },
 });

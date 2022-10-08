@@ -21,11 +21,9 @@ describe(`after visiting ["www.welcometothejungle.com/fr/me/settings/account"] w
       "basic",
       () => {
         signinPage.visit();
-        cy.fixture("ids/data.json").then((credentials) => {
-          cy.loginWithFront({
-            email: credentials.email,
-            password: credentials.password,
-          });
+        cy.loginWithFront({
+          email: Cypress.env("USER_EMAIL"),
+          password: Cypress.env("USER_PASSWORD"),
         });
         killCookie();
       },

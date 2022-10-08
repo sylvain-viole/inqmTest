@@ -14,7 +14,7 @@ export class ApiHelper {
    */
   static getMe(options) {
     return cy
-      .request(`${Cypress.env("apiUrl")}/users/me`, options)
+      .request(`${Cypress.env("API_URL")}/users/me`, options)
       .then((response) => {
         if (options?.returnWholeResponse) return response;
         else return response.body;
