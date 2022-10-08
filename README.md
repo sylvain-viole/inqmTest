@@ -1,61 +1,53 @@
-# [automated testing with cypress.io](https://www.cypress.io)
+# Inqom Technical Test
+[![<sylvain-viole>](https://circleci.com/gh/<sylvain-viole>/<inqmTest>.svg?style=svg)](https://app.circleci.com/pipelines/github/sylvain-viole/inqmTest)
 
-## description
+## Description
 
-google search testing
+**Automate a user avatar update scenario**
 
-## mandatory
+- This project uses a basic POM to handle locators.
+- `cy.session` is used to handle login and cookies.
+- API is asserted as well as UI.
 
-[node.js](https://nodejs.org/en/)
+---
+## Setup / installation
 
-## installation
-
-from bash console, clone the repository
+1. Clone the repository
 
 ```bash
-git clone https://github.com/mandriao84/itw.git
+git clone https://github.com/sylvain-viole/inqmTest.git
 ```
 
-from bash console, install the dependencies
+2. Install the dependencies
 
 ```bash
 npm i
 ```
 
-from bash console, open cypress
+3. Open Cypress
 
 ```bash
 npx cypress open
 ```
 
-from cypress dashboard, open the script "itw_wttj.js"
+4. Run tests
+`npm run cy:<browser>:<viewport>:<action>`
 
+- Example :
 ```bash
-click on itw_wttj.js
+npm run cy:electron:desktop:run
 ```
 
-## documentation
 
-folder structure
+---
+## Documentation
 
-    ├── ...
-    ├── cypress
-    │   ├── fixture
-    │   │   └── ids
-    │   │       └── data.json
-    │   │   └── img
-    │   │       └── inqom.png
-    │   ├── integration
-    │   │   └── itw_wttj.js
-    │   ├── plugins
-    │   │   └── index.js
-    │   └── support
-    │       ├── commands.js
-    │       └── index.js
-    ├── cypress.json
-    ├── package.json
-    ├── README.md
-    ├── ...
+### Dependencies :
+- Cypress : `10.9`
+- Cypress-file-upload: `5.0.8`
+
+### CI :
+- Circle CI
 
 ## license
 
