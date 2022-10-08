@@ -13,14 +13,27 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-Cypress.on('uncaught:exception', (err, runnable) => {
-  return false
-})
+Cypress.on("uncaught:exception", (err, runnable) => {
+  return false;
+});
 
 const findAllByKey = (obj, key_name) => {
-  return Object.entries(obj).reduce((acc, [key, value]) => (key === key_name) ? acc.concat(value) : (typeof value === 'object') ? acc.concat(findAllByKey(value, key_name)) : acc, [])
-}
-Cypress.findAllByKey = findAllByKey
+  return Object.entries(obj).reduce(
+    (acc, [key, value]) =>
+      key === key_name
+        ? acc.concat(value)
+        : typeof value === "object"
+        ? acc.concat(findAllByKey(value, key_name))
+        : acc,
+    []
+  );
+};
+Cypress.findAllByKey = findAllByKey;
+
+// dataStorage enables persistance of data across the code base.
+const dataStorage = {};
+Cypress.dataStorage = dataStorage;
