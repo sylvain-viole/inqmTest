@@ -7,3 +7,4 @@ cypress.env.json
 /test-results/
 /playwright-report/
 /playwright/.cache/
+cypress/fixtures/img/inqom_*

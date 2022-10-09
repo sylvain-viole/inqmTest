@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const { readdirSync, renameSync } = require("fs");
 
 module.exports = defineConfig({
   numTestsKeptInMemory: 10,
@@ -28,6 +29,17 @@ module.exports = defineConfig({
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
+      on("task", {
+        addSuffixToImageFileName(suffix) {
+          const rootDir = require("path").resolve("./");
+          const dir = `${rootDir}/cypress/fixtures/img`;
+          const files = readdirSync(dir);
+          const imgFileName = files.filter((file) => file.includes("inqom"))[0];
+          const newImgFileName = `inqom_${suffix}.png`;
+          renameSync(`${dir}/${imgFileName}`, `${dir}/${newImgFileName}`);
+          return `${dir}/${newImgFileName}`;
+        },
+      });
       on("before:browser:launch", (browser = {}, launchOptions) => {
         if (browser.name === "chrome") {
           launchOptions.preferences.default.intl = { accept_languages: "fr" };
