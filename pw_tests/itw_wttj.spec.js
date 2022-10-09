@@ -31,11 +31,10 @@ test.describe('after visiting ["www.welcometothejungle.com/fr/me/settings/accoun
       .locator("input[name=avatar]")
       .setInputFiles("./cypress/fixtures/img/inqom.png");
     const newImgUrl = await avatarImg.getAttribute("src");
-    // Asserting on new img url and img visibility
+    // Asserting on new img url
     expect(
       actualImgUrl,
       "avatar img url is not the same after upload of new image"
     ).not.toEqual(newImgUrl);
-    expect(avatarImg).toBeVisible();
   });
 });
