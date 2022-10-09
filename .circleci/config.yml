@@ -30,10 +30,6 @@ jobs:
       - run: npm run pw:webkit:run
 
   test_cypress:
-    environment:
-      CYPRESS_USER_EMAIL: $USER_EMAIL
-      CYPRESS_USER_PASSWORD: $USER_PASSWORD
-      CYPRESS_API_URL: $API_URL
     docker:
       - image: cypress/base:12
 
@@ -64,3 +60,4 @@ workflows:
   tests:
     jobs:
       - test_cypress
+      - test_playwright
