@@ -15,7 +15,7 @@
     - `cy.session` is used to handle login and cookies.
     - API is asserted as well as UI.
 - With *Playwright* :
-    - UI assertions only
+    - Quick win mode
     - No locators design patterns
 ---
 ## Setup / installation
