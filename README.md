@@ -9,12 +9,18 @@
 ---
 
 ## Insights :
-- This project uses a basic POM to handle locators.
-- `cy.session` is used to handle login and cookies.
-- API is asserted as well as UI.
-
+- This project uses both `CYPRESS` and `PLAYWRIGHT`
+- With *Cypress* :
+    - basic POM to handle locators.
+    - `cy.session` is used to handle login and cookies.
+    - API is asserted as well as UI.
+- With *Playwright* :
+    - UI assertions only
+    - No locators design patterns
 ---
 ## Setup / installation
+
+⚠️ `node.js` mandatory
 
 1. Clone the repository
 
@@ -33,13 +39,13 @@ git clone https://github.com/sylvain-viole/inqmTest.git
 npm i
 ```
 
-4. Open Cypress
+4. Use Cypress open to initialize
 
 ```bash
 npx cypress open
 ```
 
-5. Run tests
+5. Run tests with Cypress
 `npm run cy:<browser>:<viewport>:<action>`
 
 - Example :
@@ -47,6 +53,13 @@ npx cypress open
 npm run cy:electron:desktop:run
 ```
 
+6. Run tests with Playwright
+`npm run pw:<browser>:run`
+
+- Example :
+```bash
+npm run pw:webkit:run
+```
 
 ---
 ## Documentation
@@ -54,9 +67,14 @@ npm run cy:electron:desktop:run
 ### Dependencies :
 - Cypress : `10.9`
 - Cypress-file-upload: `5.0.8`
+- Playwright/test: `1.27.0`,
+- dotenv: `16.0.3`
 
 ### CI :
 - Circle CI
+- 2 jobs : `test_cypress` and `test_playwright`
+- *Cypress* runs against `electron` and `desktop` and `mobile` viewport
+- *Playwright* runs against `chorme`, `webkit` and `firefox` on `desktop`(default) viewport
 
 ## license
 
