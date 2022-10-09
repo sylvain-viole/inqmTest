@@ -64,4 +64,3 @@ workflows:
   tests:
     jobs:
       - test_cypress
-      - test_playwright
