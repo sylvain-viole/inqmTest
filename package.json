@@ -10,12 +10,19 @@
     "cy:chrome:desktop:run": "cypress run --e2e --browser chrome --config viewportWidth=1536,viewportHeight=960",
     "cy:electron:mobile:run": "cypress run --e2e --browser electron --config viewportWidth=350,viewportHeight=600",
     "cy:electron:desktop:run": "cypress run --e2e --browser electron --config viewportWidth=1536,viewportHeight=960",
+    "pw:chrome:run": "playwright test --project=chromium",
+    "pw:firefox:run": "playwright test --project=firefox",
+    "pw:webkit:run": "playwright test --project=webkit",
     "git": "git reset --hard origin/master && git fetch origin && git pull origin"
   },
   "author": "inqm",
   "license": "ISC",
   "devDependencies": {
+    "@playwright/test": "^1.27.0",
     "cypress": "^10.9.0",
     "cypress-file-upload": "^5.0.8"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
   }
 }

@@ -1,9 +1,35 @@
 version: 2.1
-orbs:
-  cypress: cypress-io/cypress@2.2.0
 
 jobs:
-  build:
+  test_playwright:
+    docker:
+      - image: mcr.microsoft.com/playwright
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+      - run: npm ci
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run: npm install
+      - run: npm run pw:chrome:run
+      - run: npm run pw:firefox:run
+      - run: npm run pw:webkit:run
+
+  test_cypress:
     docker:
       - image: cypress/base:12
 
@@ -26,13 +52,12 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # we need to install CircleCI CLI tool
-      # to run the "manual" tests
       - run: npm install
       - run: npm run cy:electron:desktop:run
       - run: npm run cy:electron:mobile:run
 
 workflows:
-  orb_tests:
+  tests:
     jobs:
-      - build
+      - test_cypress
+      - test_playwright
