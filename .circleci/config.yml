@@ -30,6 +30,10 @@ jobs:
       - run: npm run pw:webkit:run
 
   test_cypress:
+    environment:
+      CYPRESS_USER_EMAIL: $USER_EMAIL
+      CYPRESS_USER_PASSWORD: $USER_PASSWORD
+      CYPRESS_API_URL: $API_URL
     docker:
       - image: cypress/base:12
 
@@ -51,7 +55,7 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-  
+
       - run: npm install
       - run: npm run cy:electron:desktop:run
       - run: npm run cy:electron:mobile:run
