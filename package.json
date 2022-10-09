@@ -15,7 +15,11 @@
   "author": "inqm",
   "license": "ISC",
   "devDependencies": {
+    "@playwright/test": "^1.27.0",
     "cypress": "^10.9.0",
     "cypress-file-upload": "^5.0.8"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
   }
 }
