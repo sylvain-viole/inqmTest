@@ -10,13 +10,13 @@
 
 ## Insights :
 - This project uses both `CYPRESS` and `PLAYWRIGHT`
-- With *Cypress* :
-    - basic POM to handle locators.
-    - `cy.session` is used to handle login and cookies.
-    - API is asserted as well as UI.
-- With *Playwright* :
-    - Quick win mode
-    - No locators design patterns
+- This project is plugged to a [Circle CI pipeline](https://app.circleci.com/pipelines/github/sylvain-viole/inqmTest)
+- For security reason, tests credentials data are stored in environment variables (to be requested to author)
+- On *Cypress* :
+    - basic POM to handle locators
+    - `cy.session` is used to handle login and cookies
+- On *Playwright* :
+    - Simple straight froward code
 ---
 ## Setup / installation
 
@@ -28,10 +28,24 @@
 git clone https://github.com/sylvain-viole/inqmTest.git
 ```
 
-2. Request env var file `cypress.env.json` from the author or use your own, you'll need :
-- `USER_EMAIL`
-- `USER_PASSWORD`
-- `API_URL`
+2. Request env var file `cypress.env.json` and `.env` from the author or use your own, you'll need :
+
+- `cypress.env.json` :
+```json
+{
+  "USER_EMAIL": ASK AUTHOR FOR VALUE,
+  "USER_PASSWORD": ASK AUTHOR FOR VALUE,
+  "API_URL": ASK AUTHOR FOR VALUE
+}
+```
+
+- `.env`:
+
+```bash
+  USER_EMAIL=ASK AUTHOR FOR VALUE
+  USER_PASSWORD=ASK AUTHOR FOR VALUE
+  API_URL=ASK AUTHOR FOR VALUE
+```
 
 3. Install the dependencies
 
@@ -74,7 +88,7 @@ npm run pw:webkit:run
 - Circle CI
 - 2 jobs : `test_cypress` and `test_playwright`
 - *Cypress* runs against `electron` and `desktop` and `mobile` viewport
-- *Playwright* runs against `chorme`, `webkit` and `firefox` on `desktop`(default) viewport
+- *Playwright* runs against `chrome`, `webkit` and `firefox` on `desktop`(default) viewport
 
 ## license
 
